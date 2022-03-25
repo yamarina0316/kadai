@@ -8,17 +8,17 @@
     <body>
         <div class="test">
             <h1>注文フォーム</h1>
-            <form form method="POST" action="{{ route('orderform.delivalyDaysCreate') }}">
+            <form form method="POST" action="">
             @csrf
-                <div>                
-                    配送先:
-                    <select name="area">
-                        @foreach ($area as $key => $data)
-                            <option value="{{ $key }}">{{ $key }}</option>
-                        @endforeach
+                <div>
+                    希望配送日:
+                    <select name="$delivalydate">
+                    @foreach ($delivaly_dates as $delivalydate)
+                        <option value="{{ $delivalydate }}">{{ $delivalydate }}</option>
+                    @endforeach
                     </select>
                 </div>
-                <button>次へ</button>
+                <button>送信</button>
             </form>
         </div>
     </body>

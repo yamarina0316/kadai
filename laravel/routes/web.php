@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/orderform', 'App\Http\Controllers\OrderFormController@index');
+Route::post('/orderform/delivalydate', 'App\Http\Controllers\OrderFormController@delivalyDaysCreate')->name('orderform.delivalyDaysCreate');
